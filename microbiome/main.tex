@@ -1,0 +1,194 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{red} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{graphicx}
+\usepackage[scale=0.815]{geometry} % Reduce document margins
+\usepackage{bibentry}
+\newcommand{\texturl}[1]{{\color{rgb}{0.02,0.2,0.8} #1}}
+%\usepackage{hyperref}
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+
+% bibliography with mutiple entries
+\usepackage[url=false]{multibib}
+\newcites{article,unpublished}{{Peer-reviewed publications},{Preprints on bioRxiv}}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Dileep} % Your first name
+\familyname{Kishore} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{CV}
+\address{Boston University}{Boston, MA 02215, USA}
+\mobile{+1 857-302-8235}
+%\phone{}
+%\fax{(000) 111 1113}
+\email{dkishore@bu.edu}
+% \homepage{https://sriki18.github.io/website/}
+\social[linkedin]{dileep-kishore}
+\social[github]{dileep-kishore}%{Website} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{$5^{th}$ year Int. BS-MS}
+%\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+
+\section{Education}
+
+\cventry
+{2016--present}
+{Ph.D. in Bioinformatics}
+{Boston University}{Boston, USA}
+{CGPA -- 4.00/4.00}{Advisor: Prof. Daniel Segrè}
+
+\cventry
+{2011--2016}
+{B.Tech (Honors) and M.Tech (Dual Degree) in Biotechnology}
+{Indian Institute of Technology -- Madras}{Chennai, India}
+{CGPA -- 9.23/10.00}{Advisor: Prof. Karthik Raman}
+
+\section{Experience}
+\cvitemwithcomment{Graduate Student Researcher}{Boston University}{2016 -- Present}
+\cvlistitem{Developed ReLearn, a reinforcement learning framework for optimal control of microbial communities in bioreactors}
+\cvlistitem{Developed MiCoNE, a 16S sequencing data analysis pipeline for the inference of co-occurrence networks}
+\cvlistitem{Developed a pipeline to estimate binding affinities of microbial metabolites with the AHR}
+\cvlistitem{Formulated a mathematical model of the AHR regulatory pathway to study its implications in cancer progression}
+\cvlistitem{Assisted in the development of MIND, a database and web interface for the visualization and analysis of microbial interaction networks}
+\cvlistitem{Assisted in the analysis of metagenomics data from the gut microbiome of ultra centenarians and inference of co-occurrence networks}
+\cvlistitem{Assisted in the development of pipeliner, a nextflow pipeline for the analysis of bulk RNA sequencing data}
+
+\cvitemwithcomment{Software developer}{Open-source software}{2018 -- Present}
+\cvlistitem{Developed pyssa, a Python package for performing stochastic simulations with a Cython backend}
+\cvlistitem{Developed a dashboard for calculating daily carbon footprint using the Julia language}
+\cvlistitem{Developed mace, a web application to calculate total carbon emissions of sourcing recipe ingredients}
+
+\cvitemwithcomment{Research Engineer Intern}{Biocon Limited}{Summer 2014}
+\cvlistitem{Optimized impeller and sparger designs for optimal culture growth in large-scale industrial bioreactors}
+
+\cvitemwithcomment{Undergraduate Student Researcher}{Indian Institute of Technology -- Madras}{2015 -- 2016}
+\cvlistitem{Developed an algorithm for an unbiased search using GPUs to find network topologies capable of oscillations}
+
+\section{Publications}
+% Publications from a BibTeX file without multibib
+ % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+ % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\bibliographystyle{unsrt}
+
+\nocitearticle{federicoPipelinerNextflowBasedFramework2019,pachecoFAIRRepresentationsMicrobial2022}
+\bibliographystylearticle{unsrturl}
+\bibliographyarticle{publications}                   % 'publications' is the name of a BibTeX file
+
+\nociteunpublished{kishoreInferringMicrobialCooccurrence2020,kishoreIntroducingBenchmarkingAccuracy2020,huResourceComparisonIntegration2022}
+\bibliographystyleunpublished{unsrturl}
+\bibliographyunpublished{publications}                   % 'publications' is the name of a BibTeX file
+
+%\section{Publications under review}
+
+\smallskip
+
+
+\section{Technical Skills}
+\cvitem{Statistics}{Hypothesis testing, linear/logistic regression, generalized linear models}
+\cvitem{Machine Learning}{supervised (classification/regression), unsupervised, random forest, XGBoost, PCA, network inference}
+\cvitem{Deep Learning}{CNNs, RNNs}
+\cvitem{Reinforcement Learning}{off-policy (DQN), on-policy (A2C, PPO)}
+\cvitem{Mathematical Modeling}{differential equations, stochastic processes, constraint-based modeling}
+\cvitem{Optimization}{global, non-linear, linear programming, combinatorial optimization (network traversal, flow algorithms)}
+
+\section{Computer Skills}
+\cvitem{Bioinformatics and pipelines}{nextflow, snakemake, QIIME2, HUMAnN, cobrapy}
+\cvitem{Python}{NumPy, pandas, scikit-learn, SciPy, Keras, pytorch, Numba, PyCUDA, dash, dask}
+\cvitem{Julia}{JuMP.jl, Plots.jl, DataFrames.jl, Pluto.jl, Distributions.jl}
+\cvitem{R}{RSTAN, dplyr, ggplot2, igraph, ggraph}
+\cvitem{Web and Database}{React, Typescript, Flask, Django, PostgreSQL, MySQL}
+\cvitem{Cloud}{Docker, Singularity, AWS, Linode}
+\cvitem{Other}{Linux, git, C, C++, HTML/CSS, \LaTeX}
+
+
+\section{Selected posters and talks}
+
+\cvitem{}{(*presenter)}
+\cvlistitem{*Dileep Kishore, Pankaj Mehta, Daniel Segrè. \emph{Using deep-RL to control bioreactors: The ReLearn framework}. Talk. Kilachand fellowship presentation sponsored by the Multicelluar Design Program (May 2022).}
+\cvlistitem{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè. \emph{Inferring microbial co-occurrence networks from 16S data: A systematic evaluation}. Talk and poster. Intelligent Systems for Molecular Biology 2019 (ISMB 2019).}
+\cvlistitem{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè. \emph{MIND: The Microbial Interaction Network Database}. Talk and poster presentation. International Workshop on Bioinformatics and Systems Biology 2018 (IBSB 2018).}
+\cvlistitem{*Tanya Karagiannis, *Kritika Karri, *Dileep Kishore, Joshua D. Campbell, and Stefano Monti. \emph{Pipeliner: A flexible high-throughput sequencing data analysis framework}. Poster presentation. Intelligent Systems for Molecular Biology 2017 (ISMB 2017).}
+\cvlistitem{*Dileep Kishore and Jennifer Reed. \emph{Wild type flux predictions from RB-TnSeq data}. Poster presentation. Student symposium for Khorana, S. N. Bose and Viterbi-India programs 2015.}
+
+
+\section{Teaching and leadership experience}
+
+\subsection{Boston University}
+
+\cventry{2019}{BU Bioinformatics Student Organized Symposium}{Organizing committee}{}{}{
+  Helped organize the annual symposium hosted by the Boston University bioinformatics program.
+  Responsibilities included contacting leading researchers to coordinate talks at the symposium, introducing the speakers, organizing the poster session, and advertising the event to the broader scientific community in Boston.
+}
+
+\cventry{2019}{BF550: Foundations of Programming, Data Analytics, and Machine Learning in Python}{Teaching assistant and recitation instructor}{}{}{
+  Assisted in teaching programming and machine learning concepts to graduate students.
+}
+
+\cventry{2018--2019}{Bioinformatics Programming Workshops}{Organizing committee and instructor}{}{}{
+  Organized a series of workshops that taught basic programming concepts, bioinformatics tools, and tools that help facilitate reproducible research.
+}
+
+\cventry{2018--2022}{Bioinformatics Research and Interdisciplinary Training Experience}{Instructor}{}{}{
+  Organized a series of workshops to introduce basic bioinformatics research to undergraduate researchers and to provide mentorship.
+}
+
+\cventry{2018}{Bioinformatics in the Cloud Workshop}{Organizing committee and instructor}{}{}{
+  Organized a series of workshops that taught deployment of large data and complex algorithms to the cloud using the Amazon Web Services platform.
+}
+
+\subsection{Indian Institute of Technology -- Madras}
+
+\cventry{2015}{Data Structures and Algorithms for Biology}{Teaching assistant}{}{}{
+  Assisted in teaching basic bioinformatics data structures and algorithms to undergraduate students.
+}
+
+\cventry{2015}{Computational Systems Biology}{Teaching assistant}{}{}{
+  Assisted in teaching computational biology, network biology and synthetic biology to undergraduate and graduate students.
+}
+
+\section{Awards}
+\cvitemwithcomment{Academic Fellowship}{Kilachand fellowship sponsored by the multicelluar design program}{2021}
+\cvitemwithcomment{Academic best record}{Indian Institute of Technology -- Madras, Biotechnology}{2016}
+\cvitemwithcomment{99.26th percentile of 460,000 applicants}{Indian Institute of Technology Joint Entrance Exam (IIT-JEE)}{2011}
+
+
+\end{document}
