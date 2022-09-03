@@ -74,26 +74,26 @@
 {2016--present}
 {Ph.D. in Bioinformatics}
 {Boston University}{Boston, USA}
-{CGPA -- 4.00/4.00}{Advisor: Prof. Daniel Segrè}
+{GPA -- 4.00/4.00}{Advisor: Prof. Daniel Segrè}
 
 \cventry
 {2011--2016}
 {B.Tech (Honors) and M.Tech (Dual Degree) in Biotechnology}
 {Indian Institute of Technology -- Madras}{Chennai, India}
-{CGPA -- 9.23/10.00}{Advisor: Prof. Karthik Raman}
+{GPA -- 9.23/10.00}{Advisor: Prof. Karthik Raman}
 
 \section{Experience}
 \cvitemwithcomment{Graduate Student Researcher}{Boston University}{2016 -- Present}
 \cvlistitem{Developed ReLearn, a reinforcement learning framework for optimal control of microbial communities in bioreactors}
-\cvlistitem{Developed MiCoNE, a 16S sequencing data analysis pipeline for the inference of co-occurrence networks}
-\cvlistitem{Developed a pipeline to estimate binding affinities of microbial metabolites with the AHR}
+\cvlistitem{Created MiCoNE, a 16S sequencing data analysis pipeline for the inference of co-occurrence networks}
+\cvlistitem{Constructed a pipeline to estimate binding affinities of microbial metabolites with the AHR}
 \cvlistitem{Formulated a mathematical model of the AHR regulatory pathway to study its implications in cancer progression}
 \cvlistitem{Assisted in the development of MIND, a database and web interface for the visualization and analysis of microbial interaction networks}
-\cvlistitem{Assisted in the analysis of metagenomics data from the gut microbiome of ultra centenarians and inference of co-occurrence networks}
-\cvlistitem{Assisted in the development of pipeliner, a nextflow pipeline for the analysis of bulk RNA sequencing data}
+\cvlistitem{Initiated the analysis of metagenomics data from the gut microbiome of ultra centenarians and its inference into co-occurrence networks}
+\cvlistitem{Advanced the development of pipeliner, a nextflow pipeline for the analysis of bulk RNA sequencing data}
 
 \cvitemwithcomment{Software developer}{Open-source software}{2018 -- Present}
-\cvlistitem{Developed pyssa, a Python package for performing stochastic simulations with a Cython backend}
+\cvlistitem{Developed cayenne, a Python package for performing stochastic simulations with a Cython backend}
 \cvlistitem{Developed a dashboard for calculating daily carbon footprint using the Julia language}
 \cvlistitem{Developed mace, a web application to calculate total carbon emissions of sourcing recipe ingredients}
 
@@ -102,25 +102,6 @@
 
 \cvitemwithcomment{Undergraduate Student Researcher}{Indian Institute of Technology -- Madras}{2015 -- 2016}
 \cvlistitem{Developed an algorithm for an unbiased search using GPUs to find network topologies capable of oscillations}
-
-\section{Publications}
-% Publications from a BibTeX file without multibib
- % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
- % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\bibliographystyle{unsrt}
-
-\nocitearticle{federicoPipelinerNextflowBasedFramework2019,pachecoFAIRRepresentationsMicrobial2022}
-\bibliographystylearticle{unsrturl}
-\bibliographyarticle{publications}                   % 'publications' is the name of a BibTeX file
-
-\nociteunpublished{kishoreInferringMicrobialCooccurrence2020,kishoreIntroducingBenchmarkingAccuracy2020,huResourceComparisonIntegration2022}
-\bibliographystyleunpublished{unsrturl}
-\bibliographyunpublished{publications}                   % 'publications' is the name of a BibTeX file
-
-%\section{Publications under review}
-
-\smallskip
-
 
 \section{Technical Skills}
 \cvitem{Statistics}{Hypothesis testing, linear/logistic regression, generalized linear models}
@@ -135,15 +116,29 @@
 \cvitem{Python}{NumPy, pandas, scikit-learn, SciPy, Keras, pytorch, Numba, PyCUDA, dash, dask}
 \cvitem{Julia}{JuMP.jl, Plots.jl, DataFrames.jl, Pluto.jl, Distributions.jl}
 \cvitem{R}{RSTAN, dplyr, ggplot2, igraph, ggraph}
-\cvitem{Web and Database}{React, Typescript, Flask, Django, PostgreSQL, MySQL}
+\cvitem{Web and Database}{HTML/CSS, React, Typescript, Flask, Django, PostgreSQL, MySQL}
 \cvitem{Cloud}{Docker, Singularity, AWS, Linode}
-\cvitem{Other}{Linux, git, C, C++, HTML/CSS, \LaTeX}
+\cvitem{Other}{Linux, git, C, C++, \LaTeX}
+
+
+\section{Publications}
+\bibliographystyle{unsrt}
+
+\nocitearticle{federicoPipelinerNextflowBasedFramework2019,pachecoFAIRRepresentationsMicrobial2022}
+\bibliographystylearticle{unsrturl}
+\bibliographyarticle{publications}                   % 'publications' is the name of a BibTeX file
+
+\nociteunpublished{kishoreInferringMicrobialCooccurrence2020,kishoreIntroducingBenchmarkingAccuracy2020,huResourceComparisonIntegration2022}
+\bibliographystyleunpublished{unsrturl}
+\bibliographyunpublished{publications}                   % 'publications' is the name of a BibTeX file
+
+%\section{Publications under review}
 
 
 \section{Selected posters and talks}
 
 \cvitem{}{(*presenter)}
-\cvlistitem{*Dileep Kishore, Pankaj Mehta, Daniel Segrè. \emph{Using deep-RL to control bioreactors: The ReLearn framework}. Talk. Kilachand fellowship presentation sponsored by the Multicelluar Design Program (May 2022).}
+\cvlistitem{*Dileep Kishore, Pankaj Mehta, Daniel Segrè. \emph{Using deep-RL to control bioreactors: The ReLearn framework}. Talk. Kilachand fellowship presentation sponsored by the Multicellular Design Program (May 2022).}
 \cvlistitem{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè. \emph{Inferring microbial co-occurrence networks from 16S data: A systematic evaluation}. Talk and poster. Intelligent Systems for Molecular Biology 2019 (ISMB 2019).}
 \cvlistitem{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè. \emph{MIND: The Microbial Interaction Network Database}. Talk and poster presentation. International Workshop on Bioinformatics and Systems Biology 2018 (IBSB 2018).}
 \cvlistitem{*Tanya Karagiannis, *Kritika Karri, *Dileep Kishore, Joshua D. Campbell, and Stefano Monti. \emph{Pipeliner: A flexible high-throughput sequencing data analysis framework}. Poster presentation. Intelligent Systems for Molecular Biology 2017 (ISMB 2017).}
@@ -186,9 +181,9 @@
 }
 
 \section{Awards}
-\cvitemwithcomment{Academic Fellowship}{Kilachand fellowship sponsored by the multicelluar design program}{2021}
+\cvitemwithcomment{Academic Fellowship}{Kilachand fellowship sponsored by the multicellular design program}{2021}
 \cvitemwithcomment{Academic best record}{Indian Institute of Technology -- Madras, Biotechnology}{2016}
-\cvitemwithcomment{99.26th percentile of 460,000 applicants}{Indian Institute of Technology Joint Entrance Exam (IIT-JEE)}{2011}
+% \cvitemwithcomment{99.26th percentile of 460,000 applicants}{Indian Institute of Technology Joint Entrance Exam (IIT-JEE)}{2011}
 
 
 \end{document}
