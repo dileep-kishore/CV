@@ -1,0 +1,285 @@
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{red}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3.2cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{fontawesome}
+
+%----------------------------------------------------------------------------------
+% Contact information
+%----------------------------------------------------------------------------------
+\name{Dileep}{Kishore}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{1156 Commonwealth Avenue Apt. 26}{Allston, MA 02134}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(857)~302~8235}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+% \phone[fixed]{+2~(345)~678~901}
+% \phone[fax]{+3~(456)~789~012}
+\email{dkishore@bu.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+% \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[twitter]{KishoreDileep}                             % optional, remove / comment the line if not wanted
+\social[github]{dileep-kishore}                              % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\newcites{article,unpublished,misc}{{Peer-reviewed publications},{Preprints on bioRxiv},{Manuscripts under preparation}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+%----------------------------------------------------------------------------------
+% Research objective or personal profile
+%----------------------------------------------------------------------------------
+% \section{Research Objective}
+% I want to do this and that
+
+%----------------------------------------------------------------------------------
+% Education
+%----------------------------------------------------------------------------------
+\section{Education}
+  \cvitem{2016--present}{\textbf{Ph.D. in Bioinformatics}, Boston University, Boston, USA}
+  \cvitem{}{\textbf{GPA}: 4.00/4.00}
+  \cvitem{}{\textbf{Thesis supervisor}: Daniel Segrè}
+
+  \cvitem{2011--2016}{\textbf{B. Tech (Honors) and M.Tech (Dual Degree)}, Indian Institute of Technology Madras, Chennai, India}
+  \cvitem{}{\textbf{GPA}: 9.23/10.00}
+  \cvitem{}{\textbf{Major} - Biotechnology, \textbf{Minor} - Operations Research}
+  \cvitem{}{\textbf{Thesis supervisor}: Karthik Raman}
+  \cvitem{}{Graduated with best academic record}
+
+% \cventry{2016--present}{Ph.D. in Bioinformatics}{Boston University}{Boston, USA}{\textbf{GPA}: 4.00/4.00}{\textbf{Thesis Supervisor}: Daniel Segrè}  % arguments 3 to 6 can be left empty
+% \cventry{2011--2016}{B. Tech (Honors) and M.Tech (Dual Degree)}{Indian Institute of Technology}{Chennai, India}{\textbf{GPA}: 9.23/10.00}{Graduated \textit{summa cum laude}, \textbf{Major} - Biotechnology, \textbf{Minor} - Operations Research}
+
+%----------------------------------------------------------------------------------
+% Publications
+%----------------------------------------------------------------------------------
+\section{Publications}
+% Publications from a BibTeX file without multibib
+ % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+ % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\bibliographystyle{unsrturl}
+
+\nocitearticle{federicoPipelinerNextflowBasedFramework2019}
+\bibliographystylearticle{unsrturl}
+\bibliographyarticle{publications}                   % 'publications' is the name of a BibTeX file
+
+\nociteunpublished{kishoreInferringMicrobialCooccurrence2020,kishoreIntroducingBenchmarkingAccuracy2020}
+\bibliographystyleunpublished{unsrturl}
+\bibliographyunpublished{publications}                   % 'publications' is the name of a BibTeX file
+
+\nocitemisc{huResourceVisualizationIntegration}
+\bibliographystylemisc{unsrturl}
+\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+
+%----------------------------------------------------------------------------------
+% Research Experience
+%----------------------------------------------------------------------------------
+\section{Research experience and projects}
+
+  \cvitem{Sep'17--present}{\emph{A reinforcement learning approach to simulate dynamic microbial communities}}
+  \cvitem{}{Supervisors: Daniel Segrè at Boston University}
+  \cvitem{}{Developed a control-theory based approach using deep neural networks to achieve metabolic regulation in dynamic Flux Balance Analysis simulations.}
+
+  \cvitem{Sep'17--present}{\emph{A mathematical model of the AHR regulatory pathway and its implications in cancer progression}}
+  \cvitem{}{Supervisors: Daniel Segrè, David Sherr at Boston University}
+  \cvitem{}{Developed a kinetic model of the Aryl Hydrocarbon Receptor (AHR) regulatory pathway to study the interplay between ligand metabolism and AHR regulation.}
+
+  \cvitem{Jan'17--present}{\emph{Inferring microbial co-occurrence networks from 16S data: A systematic evaluation}}
+  \cvitem{}{Supervisors: Charles DeLisi, Kirill Korolev, Daniel Segrè at Boston University}
+  \cvitem{}{Collaborators: Zhenjun Hu, Gabriel Birzu}
+  \cvitem{}{Developed a flexible and modular pipeline to infer microbial co-occurrence networks from 16S sequencing data of microbiomes.}
+  \cvitem{}{Code available at: \faGithub~\href{https://github.com/segrelab/MiCoNE}{segrelab/MiCoNE}}
+
+  \cvitem{Oct'18--Oct'20}{\emph{Cayenne: Python package for stochastic simulations}}
+  \cvitem{}{Collaborators: Srikiran Chandrasekaran}
+  \cvitem{}{A Python package that offers a simple API to define models, perform stochastic simulations on them and visualize the results in a convenient manner.}
+  \cvitem{}{Code available at: \faGithub~\href{https://github.com/quantumbrake/cayenne}{quantumbrake/cayenne}}
+
+  \cvitem{Sep'16--May'17}{\emph{Pipeliner: A Nextflow-based framework for the definition of sequencing data processing pipelines}}
+  \cvitem{}{Supervisors: Joshua Campbell, Stefano Monti at Boston University}
+  \cvitem{}{Collaborators: Kritika Karri, Tanya Karagiannis}
+  \cvitem{}{Developed a flexible, portable and modular framework for high-throughput RNA sequencing analysis.}
+  \cvitem{}{Code available at: \faGithub~\href{https://github.com/montilab/pipeliner}{montilab/pipeliner}}
+
+  \cvitem{Aug`15--Jun`16}{\emph{Discovering the design principles of circadian rhythms using GPGPUs}}
+  \cvitem{}{Supervisors: Karthik Raman at Indian Institute of Technology Madras}
+  \cvitem{}{Developed an algorithm for an unbiased search using GPUs to find all topologies that are capable of circadian oscillations in networks with 2, 3 or 4 nodes.}
+
+  \cvitem{May'15--Jul'15}{\emph{Wild type flux prediction from RB-Tnseq data}}
+  \cvitem{}{Supervisors: Jennifer Reed at University of Wisconsin Madison}
+  \cvitem{}{Developed an algorithm to obtain a better quantitative estimate of the wild type fluxes, using a large number of mutants whose flux distributions were derived from the RB-Tnseq database.}
+
+  \cvitem{May'14--Jul'14}{\emph{Whole body modeling of an integrated cancer signaling pathway}}
+  \cvitem{}{Supervisors: K V Venkatesh at Indian Institute of Technology Bombay}
+  \cvitem{}{Developed and empirically validated a kinetic model that integrated various putative cancer initiation and progression pathways, to study the effect of diet on cancer progression.}
+
+
+%----------------------------------------------------------------------------------
+% Selected posters and talks
+%----------------------------------------------------------------------------------
+\section{Selected posters and talks}
+
+  \cvitem{}{(*presenter)}
+
+  \cvitem{2019}{\emph{Inferring microbial co-occurrence networks from 16S data: A systematic evaluation}}
+  \cvitem{}{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè.}
+  \cvitem{}{Talk and poster presentation. Intelligent Systems for Molecular Biology 2019 (ISMB 2019)}
+
+  \cvitem{2018}{\emph{MIND: The Microbial Interaction Network Database}}
+  \cvitem{}{*Dileep Kishore, Gabriel Birzu, Zhenjun Hu, Charles DeLisi, Kirill S. Korolev, and Daniel Segrè.}
+  \cvitem{}{Talk and poster presentation. International Workshop on Bioinformatics and Systems Biology 2018 (IBSB 2018)}
+
+  \cvitem{2018}{\emph{Pipeliner: A flexible high-throughput sequencing data analysis framework}}
+  \cvitem{}{*Tanya Karagiannis, *Kritika Karri, *Dileep Kishore, Joshua D. Campbell, and Stefano Monti.}
+  \cvitem{}{Poster presentation. Intelligent Systems for Molecular Biology 2017 (ISMB 2017)}
+
+  \cvitem{2015}{\emph{Wild type flux predictions from RB-TnSeq data}}
+  \cvitem{}{*Dileep Kishore and Jennifer Reed}
+  \cvitem{}{Poster presentation. Student symposium for Khorana, S. N. Bose and Viterbi-India programs 2015}
+
+
+%----------------------------------------------------------------------------------
+% Teaching experience
+%----------------------------------------------------------------------------------
+\section{Teaching and leadership experience}
+
+\subsection{Boston University}
+
+\cventry{2019}{BU Bioinformatics Student Organized Symposium}{Organizing committee}{}{}{
+  Helped organize the annual symposium hosted by the Boston University bioinformatics program.
+  Responsibilities included contacting leading researchers to coordinate talks at the symposium, introducing the speakers, organizing the poster session, and advertising the event to the broader scientific community in Boston.
+}
+
+\cventry{2019}{BF550: Foundations of Programming, Data Analytics, and Machine Learning in Python}{Teaching assistant and recitation instructor}{}{}{
+  Assisted in teaching programming and machine learning concepts to graduate students.
+}
+
+\cventry{2018--2019}{Bioinformatics Programming Workshops}{Organizing committee and instructor}{}{}{
+  Organized a series of workshops that taught basic programming concepts, bioinformatics tools, and tools that help facilitate reproducible research.
+}
+
+\cventry{2018--2019}{Bioinformatics Research and Interdisciplinary Training Experience}{Instructor}{}{}{
+  Organized a series of workshops to introduce basic bioinformatics research to undergraduate researchers and to provide mentorship.
+}
+
+\cventry{2018}{Bioinformatics in the Cloud Workshop}{Organizing committee and instructor}{}{}{
+  Organized a series of workshops that taught deployment of large data and complex algorithms to the cloud using the Amazon Web Services platform.
+}
+
+\subsection{Indian Institute of Technology Madras}
+
+\cventry{2015}{Data Structures and Algorithms for Biology}{Teaching assistant}{}{}{
+  Assisted in teaching basic bioinformatics data structures and algorithms to undergraduate students.
+}
+
+\cventry{2015}{Computational Systems Biology}{Teaching assistant}{}{}{
+  Assisted in teaching computational biology, network biology and synthetic biology to undergraduate and graduate students.
+}
+
+
+% \cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
+% Detailed achievements:%
+% \begin{itemize}%
+% \item Achievement 1;
+% \item Achievement 2, with sub-achievements:
+%   \begin{itemize}%
+%   \item Sub-achievement (a);
+%   \end{itemize}
+% \end{itemize}}
+
+\section{Programming languages and skills}
+
+\cvitem{pytorch, cobrapy}{
+  Used for building a modeling framework combining deep reinforcement learning and flux balance analysis (FBA)
+}
+\cvitem{Python, R, Nextflow}{
+  Used to build a pipeline for the data analysis of 16S sequencing data
+  \newline%
+  \faGithub~\href{https://github.com/segrelab/MiCoNE}{segrelab/MiCoNE}
+}
+\cvitem{Julia}{
+  Used to build a dashboard for carbon emission models
+  \newline%
+  \faGithub~\href{https://github.com/quantumbrake/ghg-dashboard}{quantumbrake/ghg-dashboard}
+}
+\cvitem{Cython, C++}{
+  Used to build a package for stochastic simulations
+  \newline%
+  \faGithub~\href{https://github.com/quantumbrake/cayenne}{quantumbrake/cayenne}
+}
+\cvitem{python dash, react, HTML, CSS}{
+  Used to build a dashboard for analyzing microbial interaction networks
+}
+\cvitem{Tellurium, scipy}{
+  Used to build a kinetic model of the AHR regulatory pathway using ordinary differential equations (ODEs)
+}
+\cvitem{PyMOL, Autodock}{
+  Used for building a pipeline for predicting microbial ligand binding to human receptors
+}
+\cvitem{CUDA C/C++}{
+  Used to solve systems of biochemical processes modeled as ordinary differential equations (ODEs) on the GPU
+}
+
+% \section{Interests}
+% \cvitem{hobby 1}{Description}
+% \cvitem{hobby 2}{Description}
+% \cvitem{hobby 3}{Description}
+
+% \section{Languages}
+% \cvitemwithcomment{Language 1}{Skill level}{Comment}
+% \cvitemwithcomment{Language 2}{Skill level}{Comment}
+% \cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+% \section{Extra 2}
+% \cvlistdoubleitem{Item 1}{Item 4}
+% \cvlistdoubleitem{Item 2}{Item 5}
+% \cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+% \section{References}
+% \begin{cvcolumns}
+%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
+
+
+\end{document}
