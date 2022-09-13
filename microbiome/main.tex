@@ -41,6 +41,14 @@
 % bibliography with mutiple entries
 \usepackage[url=false]{multibib}
 \newcites{article,unpublished}{{Peer-reviewed publications},{Preprints on bioRxiv}}
+% underline name in bibliography
+\usepackage{xstring}
+
+\let\originalbibitem\bibitem
+\def\bibitem#1#2\par{%
+  \noexpandarg
+  \originalbibitem{#1}
+  \StrSubstitute{#2}{Dileep Kishore}{\textbf{Dileep Kishore}}\par}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -82,20 +90,20 @@
 {Indian Institute of Technology -- Madras}{Chennai, India}
 {GPA -- 9.23/10.00}{Advisor: Prof. Karthik Raman}
 
-\section{Experience}
+\section{Professional experience}
 \cvitemwithcomment{Graduate Student Researcher}{Boston University}{2016 -- Present}
-\cvlistitem{Developed ReLearn, a reinforcement learning framework for optimal control of microbial communities in bioreactors}
-\cvlistitem{Created MiCoNE, a 16S sequencing data analysis pipeline for the inference of co-occurrence networks}
-\cvlistitem{Constructed a pipeline to estimate binding affinities of microbial metabolites with the AHR}
+\cvlistitem{Developed \textit{ReLearn}, a reinforcement learning framework for optimal control of microbial communities in bioreactors}
+\cvlistitem{Created \textit{MiCoNE}, a 16S sequencing data analysis pipeline for the inference of co-occurrence networks}
+\cvlistitem{Constructed a pipeline to estimate binding affinities of microbial metabolites with the Aryl Hydrocarbon Receptor (AHR)}
 \cvlistitem{Formulated a mathematical model of the AHR regulatory pathway to study its implications in cancer progression}
-\cvlistitem{Assisted in the development of MIND, a database and web interface for the visualization and analysis of microbial interaction networks}
+\cvlistitem{Assisted in the development of \textit{MIND}, a database and web interface for the visualization and analysis of microbial interaction networks}
 \cvlistitem{Initiated the analysis of metagenomics data from the gut microbiome of ultra centenarians and its inference into co-occurrence networks}
-\cvlistitem{Advanced the development of pipeliner, a nextflow pipeline for the analysis of bulk RNA sequencing data}
+\cvlistitem{Advanced the development of \textit{pipeliner}, a nextflow pipeline for the analysis of bulk RNA sequencing data}
 
 \cvitemwithcomment{Software developer}{Open-source software}{2018 -- Present}
-\cvlistitem{Developed cayenne, a Python package for performing stochastic simulations with a Cython backend}
+\cvlistitem{Developed \textit{cayenne}, a Python package for performing stochastic simulations with a Cython backend}
 \cvlistitem{Developed a dashboard for calculating daily carbon footprint using the Julia language}
-\cvlistitem{Developed mace, a web application to calculate total carbon emissions of sourcing recipe ingredients}
+\cvlistitem{Developed \textit{mace}, a web application to calculate total carbon emissions of sourcing recipe ingredients}
 
 \cvitemwithcomment{Research Engineer Intern}{Biocon Limited}{Summer 2014}
 \cvlistitem{Optimized impeller and sparger designs for optimal culture growth in large-scale industrial bioreactors}
@@ -104,6 +112,8 @@
 \cvlistitem{Developed an algorithm for an unbiased search using GPUs to find network topologies capable of oscillations}
 
 \section{Technical Skills}
+\cvitem{Bioinformatics}{16S sequence analysis, metagenomic analysis, bulk RNA-seq and single-cell RNA-seq analysis, writing pipelines}
+\cvitem{Systems Biology}{Metabolic modeling, graph theory, network analysis, kinetic modeling}
 \cvitem{Statistics}{Hypothesis testing, linear/logistic regression, generalized linear models}
 \cvitem{Machine Learning}{supervised (classification/regression), unsupervised, random forest, XGBoost, PCA, network inference}
 \cvitem{Deep Learning}{CNNs, RNNs}
