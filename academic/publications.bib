@@ -1,0 +1,177 @@
+
+@article{federicoPipelinerNextflowBasedFramework2019,
+  title = {Pipeliner: {{A Nextflow-Based Framework}} for the {{Definition}} of {
+           {Sequencing Data Processing Pipelines}}},
+  shorttitle = {Pipeliner},
+  author = {Federico, Anthony and Karagiannis, Tanya and Karri, Kritika and
+            Kishore, Dileep and Koga, Yusuke and Campbell, Joshua D. and Monti,
+            Stefano},
+  date = {2019},
+  journaltitle = {Frontiers in Genetics},
+  shortjournal = {Front. Genet.},
+  volume = {10},
+  publisher = {{Frontiers}},
+  issn = {1664-8021},
+  doi = {10.3389/fgene.2019.00614},
+  abstract = {The advent of high-throughput sequencing technologies has led to
+              the need for flexible and user-friendly data pre-processing
+              platforms. The Pipeliner framework provides an out-of-the-box
+              solution for processing various types of sequencing data. It
+              combines the Nextflow scripting language and Anaconda package
+              manager to generate modular computational workflows. We have used
+              Pipeliner to create several pipelines for sequencing data
+              processing including bulk RNA-seq, single-cell RNA-seq (scRNA-seq),
+              as well as Digital Gene Expression (DGE) data. This report
+              highlights the design methodology behind Pipeliner which enables
+              the development of highly flexible and reproducible pipelines that
+              are easy to extend and maintain on multiple computing environments.
+              We also provide a quick start user guide demonstrating how to setup
+              and execute available pipelines with toy datasets.},
+  langid = {english},
+  keywords = {Nextflow,pipeline development,RNA-Seq Pipeline,scRNA-Seq Pipeline,
+              Sequencing Workflows},
+  file = {/home/dileep/Zotero/storage/CAAP5QQ6/Federico et al_2019_Pipeliner.pdf
+          },
+}
+
+@report{huResourceComparisonIntegration2022,
+  type = {preprint},
+  title = {A Resource for the Comparison and Integration of Heterogeneous
+           Microbiome Networks},
+  author = {Hu, Zhenjun and Kishore, Dileep and Wang, Yan and Birzu, Gabriel and
+            DeLisi, Charles and Korolev, Kirill and Segrè, Daniel},
+  date = {2022-08-07},
+  institution = {{Systems Biology}},
+  doi = {10.1101/2022.08.07.503059},
+  abstract = {Abstract Naturally occurring microbial communities often comprise
+              thousands of taxa involved in complex networks of interactions.
+              These interactions can be mediated by several mechanisms, including
+              the competition for resources, the exchange of signals and
+              nutrients, cell-cell contact and antibiotic warfare. In addition to
+              direct measurements and computational predictions of interactions,
+              abundant data on microbial co-occurrence associations can be
+              inferred from correlations of taxa across samples, which can be
+              estimated from metagenomic, and amplicon datasets. The analysis and
+              interpretation of interaction and correlation networks are limited
+              by the challenge of comparing across different datasets, due to
+              heterogeneity of the data itself and to the lack of a platform to
+              facilitate such comparisons. Here, we introduce the Microbial
+              Interaction Network Database (MIND) - a web-based platform for the
+              integrative analysis of different types of microbial networks,
+              freely available at http://microbialnet.org/ . In addition to
+              containing a growing body of curated data, including amplicon-based
+              co-occurrence networks, genome-scale model-derived networks,
+              metabolic influence networks and horizontal gene transfer networks,
+              MIND allows users to upload and analyze newly generated networks
+              using a JSON format and standard NCBI taxonomy. The platform
+              provides convenient functions to compare and query multiple
+              networks simultaneously, and to visualize and export networks and
+              datasets. Through some illustrative examples, we demonstrate how
+              the platform might facilitate discoveries and help generate new
+              hypotheses on host-associated and environmentally important
+              microbial ecosystems through the power of knowledge integration.},
+  langid = {english},
+  file = {/home/dileep/Zotero/storage/WEZ5DST4/Hu et al_2022_A resource for the
+          comparison and integration of heterogeneous microbiome.pdf},
+}
+
+@article{kishoreInferringMicrobialCooccurrence2020,
+  title = {Inferring Microbial Co-Occurrence Networks from Amplicon Data: A
+           Systematic Evaluation},
+  shorttitle = {Inferring Microbial Co-Occurrence Networks from Amplicon Data},
+  author = {Kishore, Dileep and Birzu, Gabriel and Hu, Zhenjun and DeLisi,
+            Charles and Korolev, Kirill S. and Segrè, Daniel},
+  date = {2020-09-23},
+  journaltitle = {bioRxiv},
+  pages = {2020.09.23.309781},
+  publisher = {{Cold Spring Harbor Laboratory}},
+  doi = {10.1101/2020.09.23.309781},
+  abstract = {{$<$}h3{$>$}Abstract{$<$}/h3{$>$} {$<$}p{$>$}Microbes tend to
+              organize into communities consisting of hundreds of species
+              involved in complex interactions with each other. 16S ribosomal RNA
+              (16S rRNA) amplicon profiling provides snapshots that reveal the
+              phylogenies and abundance profiles of these microbial communities.
+              These snapshots, when collected from multiple samples, have the
+              potential to reveal which microbes co-occur, providing a glimpse
+              into the network of associations in these communities. The
+              inference of networks from 16S data is prone to statistical
+              artifacts. There are many tools for performing each step of the 16S
+              analysis workflow, but the extent to which these steps affect the
+              final network is still unclear. In this study, we perform a
+              meticulous analysis of each step of a pipeline that can convert 16S
+              sequencing data into a network of microbial associations. Through
+              this process, we map how different choices of algorithms and
+              parameters affect the co-occurrence network and estimate steps that
+              contribute most significantly to the variance. We further determine
+              the tools and parameters that generate the most accurate and robust
+              co-occurrence networks based on comparison with mock and synthetic
+              datasets. Ultimately, we develop a standardized pipeline that
+              follows these default tools and parameters, but that can also help
+              explore the outcome of any other combination of choices. We
+              envisage that this pipeline for processing 16S sequencing data into
+              networks of microbial co-occurrences could be used for integrating
+              multiple data-sets, and for generating comparative analyses and
+              consensus networks that can help understand and control microbial
+              community assembly in different biomes. The pipeline is available
+              as a Python package at https://github.com/segrelab/MiCoNE{$<$}/p{
+              $>$}},
+  langid = {english},
+  file = {/home/dileep/Zotero/storage/ED7V37EV/Kishore et al_2020_Inferring
+          microbial co-occurrence networks from amplicon
+          data.pdf;/home/dileep/Zotero/storage/RIX76H7X/2020.09.23.309781v1.html},
+}
+
+@article{kishoreIntroducingBenchmarkingAccuracy2020,
+  title = {Introducing and Benchmarking the Accuracy of Cayenne: A {{Python}}
+           Package for Stochastic Simulations},
+  shorttitle = {Introducing and Benchmarking the Accuracy of Cayenne},
+  author = {Kishore, Dileep and Chandrasekaran, Srikiran},
+  date = {2020-10-10},
+  journaltitle = {bioRxiv},
+  pages = {2020.10.10.334623},
+  publisher = {{Cold Spring Harbor Laboratory}},
+  doi = {10.1101/2020.10.10.334623},
+  abstract = {{$<$}h3{$>$}Abstract{$<$}/h3{$>$} {$<$}p{$>$}Biological systems
+              are intrinsically noisy and this noise may determine the
+              qualitative outcome of the system. In the absence of analytical
+              solutions to mathematical models incorporating noise, stochastic
+              simulation algorithms are useful to explore the possible
+              trajectories of these systems. Algorithms used for such stochastic
+              simulations include the Gillespie algorithm and its approximations.
+              In this study we introduce cayenne, an easy to use Python package
+              containing accurate and fast implementations of the Gillespie
+              algorithm (direct method), the tau-leaping algorithm and a
+              tau-adaptive algorithm. We compare the accuracy of cayenne with
+              other stochastic simulation libraries (BioSimulator.jl,
+              GillespieSSA and Tellurium) and find that cayenne offers the best
+              trade-off between accuracy and speed. Additionally, we highlight
+              the importance of performing accuracy tests for stochastic
+              simulation libraries, and hope that it becomes standard practice
+              when developing the same.{$<$}/p{$><$}p{$>$}The cayenne package can
+              be found at https://github.com/Heuro-labs/cayenne while the
+              bench-marks can be found at
+              https://github.com/Heuro-labs/cayenne-benchmarks{$<$}/p{$>$}},
+  langid = {english},
+  file = {
+          /home/dileep/Zotero/storage/ACMI6TVT/Kishore_Chandrasekaran_2020_Introducing
+          and benchmarking the accuracy of
+          cayenne.pdf;/home/dileep/Zotero/storage/MMKKFMDP/2020.10.10.334623v1.html
+          },
+}
+
+@article{pachecoFAIRRepresentationsMicrobial2022,
+  title = {Toward {{FAIR Representations}} of {{Microbial Interactions}}},
+  author = {Pacheco, Alan R. and Pauvert, Charlie and Kishore, Dileep and Segrè,
+            Daniel},
+  date = {2022-08-25},
+  journaltitle = {mSystems},
+  volume = {0},
+  number = {0},
+  pages = {e00659-22},
+  publisher = {{American Society for Microbiology}},
+  doi = {10.1128/msystems.00659-22},
+  file = {/home/dileep/Zotero/storage/YMZB4HRN/Pacheco et al_2022_Toward FAIR
+          Representations of Microbial Interactions.pdf},
+}
+
+
